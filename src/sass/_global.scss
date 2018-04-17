@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lower {
+  padding-top: 50px
+}
+
+.red {
+  background-color: red;
+  font-size: 40px;
+}

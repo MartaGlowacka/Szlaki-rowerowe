@@ -1,0 +1,13 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  //align-items: center;
+  &_form {
+    border: 1px solid red;
+    width: 30%;
+  }
+  &_results {
+    border: 1px solid red;
+    width: 65%;
+  }
+}

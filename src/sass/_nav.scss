@@ -1,0 +1,137 @@
+@mixin easeOut {
+  transition: all .4s cubic-bezier(0.23, 1, 0.32, 1)
+}
+$black: black;
+
+nav {
+  position: fixed;
+  min-width: 100%; //na pewno wtedy jest 100%
+  height: 50px;
+  background-color: white;
+  z-index: 1000;
+}
+
+//wrapper w nav
+nav {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+//lista w nav
+nav {
+  ul {
+    width: 60%;
+    display: flex; //to jest flex do listy
+    justify-content: space-evenly;
+    list-style-type: none;
+
+    li {
+      flex: 1 1 auto;
+      text-align: center;
+      @include easeOut;
+    }
+
+    a {
+      display: block;
+      color: black;
+      line-height: 50px;
+      text-decoration: none;
+      @include easeOut;
+
+      &:hover {
+        color: red;
+      }
+    }
+
+  }
+}
+
+//burger icom
+nav {
+  .hamburger {
+    display: none;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    cursor: pointer;
+    //@include easeOut;
+
+    i, i:before, i:after {
+      content: '';
+      width: 25px; height: 4px;
+      background: $black;
+      border-radius: 4px;
+      cursor: pointer;
+      //transition: transform .2s ease;
+    }
+
+    i {
+      display: block;
+      position: relative;
+      top: 16px;
+      right: 6px;
+    }
+
+    i:before {
+      position: absolute;
+      top: -8px;
+    }
+
+    i:after {
+      position: absolute;
+      top: 8px;
+    }
+
+  }
+  //robinie krzyzyka po kliknieciu
+  &.active{
+    i {
+      background: transparent;
+    }
+
+    i:before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    i:after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  //wystylowanie lsisty dla malych przed kliknieciem
+  nav {
+    ul{
+      display: none;
+    }
+    .hamburger {
+      display: inline-block;
+    }
+  }
+
+  nav {
+    &.active .navList {
+      display: block;
+      position:absolute;
+      top:100%;
+      right:0;
+      //flex-direction: column;
+
+      li {
+        text-align:center;
+        background: white;
+      }
+    }
+
+  }
+
+
+}
+
+
