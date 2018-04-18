@@ -9,7 +9,7 @@ class SearchResults extends React.Component {
         let resultRoutes = [];
 
         this.props.data.forEach((route) => {
-    console.log(route.id);
+  
             if (this.props.voivodoship === 'calaPolska') {
                 resultRoutes.push(<li style={{border: '1px dashed blue', textDecoration: 'none'}}>
 
