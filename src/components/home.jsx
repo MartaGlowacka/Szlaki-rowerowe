@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Map from './map.jsx'
+import Slider from './slider.jsx'
 
 class Home extends React.Component {
     render() {
@@ -10,6 +11,7 @@ class Home extends React.Component {
                     Jestem Home
 
                     <Map />
+                    <Slider />
                 </div>
 
             </div>

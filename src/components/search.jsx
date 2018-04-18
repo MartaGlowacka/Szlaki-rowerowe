@@ -8,12 +8,55 @@ import SearchResults from './searchresults.jsx';
 class Search extends React.Component {
     state={
         data: [],
-        voivodeship: 'calaPolska'
+        voivodeship: 'calaPolska',
+        easy: false,
+        medium: false,
+        difficult: false,
+        road: false,
+        mtb: false,
+        distanceMin: 0,
+        distanceMax: 1000,
+        typeOfBike: [],
+        level: [],
+
     }
 
     handleVoivodeshipChange = (value) => {
         this.setState({
             voivodeship: value
+        })
+
+    }
+
+    handleLevelSelect = (value) => {
+        console.log(value);
+        this.setState({
+            level: value
+        })
+
+    }
+
+
+    handleBikeTypeSelect = (value) => {
+        console.log(value);
+        this.setState({
+            typeOfBike: value
+        })
+
+    }
+
+    handleMinChange = (value) => {
+        console.log(value);
+        this.setState({
+            distanceMin: Number(value)
+        })
+
+    }
+
+    handleMaxChange = (value) => {
+        console.log(value);
+        this.setState({
+            distanceMax: Number(value)
         })
 
     }
@@ -26,8 +69,25 @@ class Search extends React.Component {
         return (
             <div className='lower'>
                 <div className="wrapper search">
-                    <SearchForm handleVoivodeshipChange={this.handleVoivodeshipChange}/>
-                    <SearchResults voivodoship={this.state.voivodeship} data={this.state.data}/>
+                    <SearchForm
+                        easy = {this.state.easy}
+                        medium = {this.state.medium}
+                        difficult = {this.state.difficult}
+                        road = {this.state.road}
+                        mtb = {this.state.mtb}
+                        handleVoivodeshipChange={this.handleVoivodeshipChange}
+                        handleLevelSelect={this.handleLevelSelect}
+                        handleBikeTypeSelect={this.handleBikeTypeSelect}
+                        handleMinChange={this.handleMinChange}
+                        handleMaxChange={this.handleMaxChange}
+                        />
+                    <SearchResults
+                        distanceMin = {this.state.distanceMin}
+                        distanceMax = {this.state.distanceMax}
+                        voivodeship={this.state.voivodeship}
+                        typeOfBike={this.state.typeOfBike}
+                        level={this.state.level}
+                        data={this.state.data}/>
                 </div>
 
             </div>

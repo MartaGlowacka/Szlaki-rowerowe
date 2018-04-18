@@ -11,17 +11,7 @@
       "level": "medium",
       "src": "https://www.traseo.pl/mapa/92828/m/0/i/0/g/0/cs/0"
     },
-    {
-      "id": 96013,
-      "name": "Pętla susiecka",
-      "voivodeship": "lubelskie",
-      "location": "Susiec",
-      "typeOfBike": "mtb",
-      "distance": 53,
-      "duration": 6.5,
-      "level": "medium",
-      "src": "https://www.traseo.pl/mapa/96013/m/0/i/0/g/0/cs/0/"
-    },
+
     {
       "id": 92423,
       "name": "Roztocze Fatem",
@@ -1111,17 +1101,6 @@
     },
 
     {
-      "id": 19330,
-      "name": "Bory Tucholskie",
-      "voivodeship": "pomorskie",
-      "location": "Brusy",
-      "typeOfBike": "road",
-      "distance": 241,
-      "duration": 75.9,
-      "level": "easy",
-      "src": "https://www.traseo.pl/mapa/19330/m/0/i/0/g/0/cs/0/"
-    },
-    {
       "id": 24975,
       "name": "Pętla Raduńska",
       "voivodeship": "pomorskie",
@@ -1187,17 +1166,6 @@
       "level": "medium",
       "src": "https://www.traseo.pl/mapa/104643/m/0/i/0/g/0/cs/0/"
     },
-    {
-      "id": 59535,
-      "name": "Z Grudziądza nad morze",
-      "voivodeship": "pomorskie",
-      "location": "Gdynia",
-      "typeOfBike": "mtb ",
-      "distance": 314,
-      "duration": 17.3,
-      "level": "easy",
-      "src": "https://www.traseo.pl/mapa/59535/m/0/i/0/g/0/cs/0/"
-    },
 
 
     {
@@ -1233,17 +1201,7 @@
       "level": "medium",
       "src": "https://www.traseo.pl/mapa/104554/m/0/i/0/g/0/cs/0/"
     },
-    {
-      "id": 98562,
-      "name": "Z Knurowa do Ujścia Bierwki",
-      "voivodeship": "slaskie",
-      "location": "Knurów",
-      "typeOfBike": "mtb",
-      "distance": 80.6,
-      "duration": 8.4,
-      "level": "easy",
-      "src": "https://www.traseo.pl/mapa/98562/m/0/i/0/g/0/"
-    },
+
     {
       "id": 96691,
       "name": "Pałace na północ od Bytomia",
@@ -1302,18 +1260,6 @@
       "level": "medium",
       "src": "https://www.traseo.pl/mapa/97173/m/0/i/0/g/0/cs/0/"
     },
-    {
-      "id": 60423,
-      "name": "Z Werska przez Krajeński Park Krajobrazowy",
-      "voivodeship": "wielkopolskie",
-      "location": "Wersk",
-      "typeOfBike": "mtb",
-      "distance": 45.7,
-      "duration": 4.2,
-      "level": "easy",
-      "src": "https://www.traseo.pl/mapa/60423/m/0/i/0/g/0/cs/0/"
-    },
-
     {
       "id": 99761,
       "name": "Piastowski Trakt Rowerowy",

@@ -8,6 +8,7 @@ import Nearby from './nearby.jsx';
 
 
 class ResultRoute extends React.Component {
+
     state = {
 
         location: '',
@@ -40,6 +41,7 @@ class ResultRoute extends React.Component {
             <Nearby text='Zobacz trasy w okolicy:'/>
             </section>
             
+
         )
     }
 

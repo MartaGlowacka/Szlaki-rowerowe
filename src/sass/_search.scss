@@ -2,12 +2,46 @@
   display: flex;
   justify-content: space-between;
   //align-items: center;
+
+
   &_form {
     border: 1px solid red;
     width: 30%;
+    padding: 1em;
+    div {
+      border: 1px solid blue;
+      padding: 10px;
+      label {
+        display: block;
+      }
+    }
+
   }
   &_results {
     border: 1px solid red;
     width: 65%;
+
   }
 }
+
+.result {
+  margin: 1em;
+  border: 1px dashed blue;
+  text-decoration: none;
+  padding: 1em;
+  h3{
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    margin-bottom: 0.3em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search {
+    display: flex;
+    flex-direction: row;
+
+    }
+  }
