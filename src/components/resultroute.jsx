@@ -3,17 +3,13 @@ import React from 'react';
 
 
 class ResultRoute extends React.Component {
-    state = {
-        name: ''
-    }
 
-    render() {
+        render() {
+
         console.log(this.props);
         return (
             <div className="lower">
-                {
-                    this.state.name
-                }
+
             </div>
         )
     }
