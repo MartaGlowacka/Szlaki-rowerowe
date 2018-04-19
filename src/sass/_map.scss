@@ -1,15 +1,15 @@
-.hoverEffect {
-  fill: #4c8ca2;
+path {
   &:hover {
-    animation: spin 1s linear infinite;
+    animation: spin 0.2s ease-in;
+    animation-fill-mode: forwards;
   }
 
 }
 @keyframes spin {
   from {
-    fill: #fa5314
+    fill: #feb544
   }
   to {
-    fill: #fa5
+    fill: #ff853d
   }
 }

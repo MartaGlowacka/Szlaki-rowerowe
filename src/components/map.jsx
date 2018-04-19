@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 class Map extends React.Component {
 
     state = {
-        color: "pink",
+        color: "rgb(100,100,100)",
         voiv: ''
     }
 
@@ -18,11 +18,11 @@ class Map extends React.Component {
         console.log(paths.length);
 
         for(let i = 0; i < paths.length;i++) {
-            paths[i].style.fill = 'pink';
+            paths[i].style.fill = "rgb(100,100,100)";
         }
 
 
-        (e.target.style.fill === 'pink') ? e.target.style.fill = 'black':  e.target.style.fill = 'pink'
+        (e.target.style.fill === "rgb(50,50,50)") ? e.target.style.fill = "rgb(100,100,100)":  e.target.style.fill = "rgb(50,50,50)";
         console.log(e.target.dataset.id);
 
 

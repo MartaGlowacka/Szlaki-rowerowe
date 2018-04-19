@@ -32,6 +32,11 @@ class App extends React.Component {
                         </div>
                         {/*<Route component={NotFound} />*/}
                     </Switch>
+                    {/*<footer >*/}
+                        {/*<div className={'footer'}>*/}
+                            {/*© Kacze trasy - stworzone przez kaczkę Martę i kaczkę Justynę*/}
+                        {/*</div>*/}
+                    {/*</footer>*/}
                 </div>
             </HashRouter>
         )
