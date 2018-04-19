@@ -1,0 +1,27 @@
+
+
+
+.rozwin {
+    color: gray;
+    text-align: center;
+
+    &:hover {
+        color: black;
+    }
+}
+
+
+.random_route_list {
+    li {
+        margin-top: 25px;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+

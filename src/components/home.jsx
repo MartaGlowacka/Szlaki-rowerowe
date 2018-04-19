@@ -8,10 +8,11 @@ class Home extends React.Component {
         return (
             <div className='lower'>
                 <div className="wrapper red">
+                 <Slider />
                     Jestem Home
 
                     <Map />
-                    <Slider />
+                   
                 </div>
 
             </div>
