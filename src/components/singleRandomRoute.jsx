@@ -9,30 +9,25 @@ class SingleRandomRoute extends React.Component {
         image: this.props.image,
     }
 
-    // randomRoute = () => {
-    //     let random = Math.floor(Math.random()*this.state.id.length);
-    //    return random
-    // }
 
     render () {
         
-        
-
+    
         if (this.state.id.length === 0) {
             return null
         }
 
-
-
-
         return(
-            <div className="single" >
+
             
-                <div style={{flex: '2', backgroundColor: 'pink', width: '60%'}}>
-                <img style={{height: '200px', width: '350px'}}  src={`/src/images/${this.state.image}`} /></div>
-                <iframe style={{flex: '1'}} src={`https://www.traseo.pl/mapa/${this.state.id[this.state.random]}/m/0/i/0/g/0/`} style={{width:"250px", height:"200px",frameborder:'0'
+            <div className="single" >            
+                <div className='imag'></div>              
+                {/* <img style={{height: '200px', width: '350px'}}  src={`/src/images/${this.state.image}`} /></div> */}
+                <iframe style={{flex: '1'}} src={`https://www.traseo.pl/mapa/${this.state.id[this.state.random]}/m/0/i/0/g/0/`} style={{width:"250px", height:"100%",frameborder:'0'
              }}/>
             </div>
+           
+           
         ) 
     }
 

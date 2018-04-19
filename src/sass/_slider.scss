@@ -16,8 +16,10 @@
     .strong {
         position: absolute;
         color: white;
-        top: 90px;
-        left: 120px; 
+        // top: 90px;
+        top: 15vh;
+        // left: 120px; 
+        left: 6vw;
         text-shadow: 0 0 5px rgb(24, 31, 24);  
         font-size: xx-large;
     }
@@ -53,7 +55,7 @@
         flex-direction: column;
         justify-content: center;
         background-color: black;
-        color: white;
+        color: $kaczkowy;
 
     
 
