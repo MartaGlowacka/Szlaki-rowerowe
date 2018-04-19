@@ -14,9 +14,7 @@ class Slider extends React.Component {
     }
 
 
-    handleClick = () => {
-        
-    }
+
 
     render () {
 
@@ -49,6 +47,9 @@ class Slider extends React.Component {
             </div>
              <img src={`/src/images/${this.state.id}`} />  
            
+          {/* <div className="img" style={{backgroundImage: `url(/url/images/bike.jpg)`}}>dfdd</div> */}
+            
+           
                        
             <div className="random_main_page">
             <h3>Trasa na dziś:</h3>
@@ -77,7 +78,7 @@ class Slider extends React.Component {
     }
 
     componentDidMount () {
-   const photo = ['afternoon.jpg', 'bicycling.jpg', 'bike.jpg', 'gruzja.jpg', 'man.jpg', 'fot3.JPG', 'fot4.JPG', 'fot5.JPG', 'fot6.JPG', 'fot7.JPG', 'fot8.JPG'];
+   const photo = ['afternoon.jpg', 'bicycling.jpg', 'bike.jpg', 'gruzja.jpg', 'man.jpg', 'fot3.jpg', 'fot4.jpg', 'fot5.jpg', 'fot6.jpg', 'fot7.jpg', 'fot8.jpg'];
 
         this.id = setInterval(()=> {
                 (this.state.random_nr < photo.length-1) ? this.setState({random_nr: this.state.random_nr+1}) : this.setState({random_nr: 0})

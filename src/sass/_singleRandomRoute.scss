@@ -5,6 +5,12 @@
     margin:0 auto;
 
 
-
-    
+    .imag {
+        background-image: url("../images/outdoor.jpg");
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        flex: 2;
+    }
 }

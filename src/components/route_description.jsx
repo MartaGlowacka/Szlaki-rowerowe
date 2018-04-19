@@ -2,32 +2,34 @@ import React from 'react';
 
 class Route_description extends React.Component {
 
-    state = {
-        show: 'none',
-    }
+    // state = {
+    //     show: 'none',
+    // }
 
-    handleClick =() => {
+    // handleClick =() => {
 
-        this.state.show == 'none' ? this.setState({show: 'block'}) : this.setState({show: 'none'});
+    //     this.state.show == 'none' ? this.setState({show: 'block'}) : this.setState({show: 'none'});
        
-    }
+    // }
 
 
 
     render () {
 
-        const desc = {
-            display: this.state.show,
+        // const desc = {
+        //     display: this.state.show,
 
-        }
+        // }
+
+        // w divei o classname text style={desc}
 
         return(
             <div className='route_description'>
-                <h1 onClick={this.handleClick}>Więcej o trasie:</h1>
+                <h1 >Więcej o trasie:</h1>
                 <hr/>
 
                 <div className='text_photo'>
-                <div className='text' style={desc}>
+                <div className='text' >
                    Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.
                 <br/>
                 <br/>
