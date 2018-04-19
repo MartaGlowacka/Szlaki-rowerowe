@@ -13,7 +13,10 @@ class Nav extends React.Component {
         return (
             <nav onClick={this.toggleSideNav}>
                 <div className="wrapper">
-                    <h1>Tu jest logo</h1>
+                    <NavLink exact to='/'>
+                        <h1>Tu jest logo</h1>
+                    </NavLink>
+
                     <div className="hamburger">
                         <i></i>
                     </div>

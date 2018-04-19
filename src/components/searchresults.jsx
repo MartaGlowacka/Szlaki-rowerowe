@@ -83,6 +83,7 @@ resultArray = tempDistance.slice();
                     <p>Długość trasy: {el.distance}</p>
                     <p>Poziom trudności: {el.level}</p>
                     <p>BikeType: {el.typeOfBike}</p>
+                    <p>wojewodztwoe: {el.voivodeship}</p>
                 </Link>
             </li>)});
 

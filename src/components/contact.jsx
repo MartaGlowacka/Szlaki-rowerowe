@@ -6,8 +6,22 @@ class Contact extends React.Component {
         return (
             <div className='lower'>
                 <div className="wrapper">
-                    <h1>Contact</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci aperiam, autem blanditiis consectetur, culpa cupiditate deleniti dolore dolorem facere quo recusandae reiciendis rerum sequi tempore, voluptatibus? Blanditiis, vel!</p>
+                    <h2>Kontakt</h2>
+                    <div className="box">
+                        <form action="#">
+                            <input type="text" placeholder="Imię i nazwisko" name="username" required/>
+                                <input type="email" placeholder="Adres Email" name="email" required/>
+                                <input type="tel" placeholder="Numer teefonu" name="phone" required/>
+                                    <textarea name="message" cols="30" rows="10" placeholder="Treść wiadomości.." required>
+
+                                    </textarea>
+                                    <div className="checkbox-wrapper">
+                                        <input type="checkbox"/>
+                                            <p>Wyslij kopię maila do mnie</p>
+                                    </div>
+                                    <button>Wyślij wiadomość</button>
+                        </form>
+                    </div>
                 </div>
 
             </div>

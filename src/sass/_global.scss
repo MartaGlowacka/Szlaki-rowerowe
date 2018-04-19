@@ -6,6 +6,9 @@
 
 body {
   position: relative;
+  font-family: 'Lato', sans-serif;
+  //font-family: 'Montserrat', sans-serif;
+  //font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
@@ -18,6 +21,84 @@ body {
 }
 
 .red {
-  background-color: red;
+  background-color: salmon;
   font-size: 40px;
+}
+
+//.hoverEffect {
+//  fill: #284d00!important;
+//}
+
+
+path {
+  stroke: red;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear alternate infinite;
+}
+@keyframes dash {
+  from {
+    stroke: red;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke: blue;
+    stroke-dashoffset: 800;
+  }
+}
+
+//path {
+//  stroke-dasharray: 1000;
+//  stroke-dashoffset: 1000;
+//  animation: dash 5s linear alternate infinite;
+//}
+//@keyframes dash {
+//  from {
+//    stroke-dashoffset: 1000;
+//  }
+//  to {
+//    stroke-dashoffset: 500;
+//  }
+//}
+
+//.hoverEffect {
+//  fill: #4c8ca2;
+//  transform: scale(1,1);
+//  transition-timing-function: ease-out;
+//  transition-duration: 250ms;
+//  &:hover {
+//    transform: scale(1.05,1.07);
+//    transition-timing-function: ease-out;
+//    transition-duration: 250ms;
+//  }
+//}
+
+
+
+// .hoverEffect {
+//  fill: #4c8ca2;
+//  animation: spin 10s linear infinite;
+//}
+//@keyframes spin {
+//  from {
+//    transform: rotate(0deg);
+//  }
+//  to {
+//    transform: rotate(360deg);
+//  }
+//}
+.hoverEffect {
+  fill: #4c8ca2;
+  &:hover {
+    animation: spin 1s linear infinite;
+  }
+
+}
+@keyframes spin {
+  from {
+    fill: #fa5314
+  }
+  to {
+    fill: #fa5
+  }
 }

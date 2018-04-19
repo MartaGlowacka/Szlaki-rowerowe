@@ -3,14 +3,16 @@ import React from 'react';
 class Slider extends React.Component {
 
 
-    state = {
-        
-    }
 
 
     render () {
+
+        const style = {
+            height: '600px',
+            background: '#ccc'
+        }
         return (
-            <div>
+            <div style = {style}>
                 <img src="" />
             </div>
         )

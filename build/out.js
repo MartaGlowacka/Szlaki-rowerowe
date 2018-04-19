@@ -28672,7 +28672,7 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _map = __webpack_require__(/*! ./map.jsx */ "./src/components/map.jsx");
+var _map = __webpack_require__(/*! ./mapsection.jsx */ "./src/components/mapsection.jsx");
 
 var _map2 = _interopRequireDefault(_map);
 
@@ -28718,7 +28718,7 @@ exports.default = Home;
 
 /***/ "./src/components/map.jsx":
 /*!********************************!*\
-  !*** ./src/components/map.jsx ***!
+  !*** ./src/components/mapsection.jsx ***!
   \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
