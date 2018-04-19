@@ -10,7 +10,7 @@ class SingleMap extends React.Component {
     render () {
         return (
             <div>
-            <iframe src={this.state.src} style={{width:"50vw", height:"60vh",frameborder:'0', border:'border:1px solid #000' }}>
+            <iframe src={this.state.src} style={{width:"50vw", height:"60vh",frameborder:'5px', border:'border:4px solid black' }}>
             </iframe>
         </div>
         )

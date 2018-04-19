@@ -5,15 +5,14 @@ class Nearby extends React.Component {
 
     state = {
         text: this.props.text,
-        show: 'none',
+        show: 'block',
 
     }
 
-    handleClick = () => {
-
-        this.state.show == 'none' ? this.setState({show: 'block'}) : this.setState({show: 'none'});
-        
+    handleCLick = () => {
+        window.scrollTo(0, 1000)
     }
+
 
 
     render () {
@@ -25,15 +24,14 @@ class Nearby extends React.Component {
 
 
         const rozwin = {
-            textAlign: 'center',
+            
             cursor: 'pointer',
 
         }
 
-
         return (
             <div className="main_nearby">
-            <h1 className="rozwin" onClick={this.handleClick}><a name="trzecieId">{this.props.text}</a></h1>
+            <h1 className="rozwin" onClick={this.handleCLick}>{this.props.text}</h1>
                 <hr/>
                 <br/>
                 <br/>
@@ -42,7 +40,7 @@ class Nearby extends React.Component {
                 <ul className="random_route_list" style={opis_trasy}>
                     <li ><SingleRandomRoute image='bike.jpg'/></li>
                     <li ><SingleRandomRoute image='outdoor.jpg'/></li>
-                    <li><a name="trzecieId"><SingleRandomRoute image='silent.jpg'/></a></li>
+                    <li><SingleRandomRoute image='silent.jpg'/></li>
                 </ul>
             </div>
 

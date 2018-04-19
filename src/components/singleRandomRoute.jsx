@@ -22,24 +22,16 @@ class SingleRandomRoute extends React.Component {
             return null
         }
 
-        
-
-        const style = {
-            width:'50%',
-            height: '200px',
-            display: 'flex',
-            margin: '0 auto',
-
-        }
 
 
 
         return(
-            <div style={style}>
+            <div className="single" >
             
-                <div style={{order: '2', backgroundColor: 'pink', width: '60%'}}>
+                <div style={{flex: '2', backgroundColor: 'pink', width: '60%'}}>
                 <img style={{height: '200px', width: '350px'}}  src={`/src/images/${this.state.image}`} /></div>
-                <iframe style={{order: '1'}} src={`https://www.traseo.pl/mapa/${this.state.id[this.state.random]}/m/0/i/0/g/0/`} style={{width:"200px", height:"200px",frameborder:'0', border:'border:1px solid #000' }}/>
+                <iframe style={{flex: '1'}} src={`https://www.traseo.pl/mapa/${this.state.id[this.state.random]}/m/0/i/0/g/0/`} style={{width:"250px", height:"200px",frameborder:'0'
+             }}/>
             </div>
         ) 
     }

@@ -22,10 +22,12 @@ class Route_description extends React.Component {
         }
 
         return(
-            <div>
-                <h1 style={{textAlign: 'center', cursor: 'pointer'}}  onClick={this.handleClick}>Więcej o trasie:</h1>
+            <div className='route_description'>
+                <h1 onClick={this.handleClick}>Więcej o trasie:</h1>
                 <hr/>
-                <div style={desc}>
+
+                <div className='text_photo'>
+                <div className='text' style={desc}>
                    Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.
                 <br/>
                 <br/>
@@ -35,7 +37,14 @@ class Route_description extends React.Component {
                 <br/>
                 <br/>
                 Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing.
+                <br/>
+                <br/>
+                Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat.
+            
                 </div>
+                <div className="gallery"></div>
+                </div>
+               
                 
             </div>
         )

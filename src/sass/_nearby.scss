@@ -3,18 +3,24 @@
 
 .rozwin {
     color: gray;
-    text-align: center;
+    margin: 15px 0;
+    cursor: pointer;
+    color: black;
+    
 
-    &:hover {
-        color: black;
-    }
+
+    // &:hover {
+    //     color: black;
+    // }
+
+    
 }
 
 
 .random_route_list {
     li {
         margin-top: 25px;
-        opacity: 0.5;
+        opacity: 0.8;
 
         &:hover {
             opacity: 1;
