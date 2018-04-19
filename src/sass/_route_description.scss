@@ -1,0 +1,30 @@
+.route_description {
+
+     h1 {
+         cursor: pointer;
+         margin: 15px 0;
+     }
+
+     .text_photo {
+
+        display: flex;
+
+
+        .text {
+         margin: 15px 25px 15px 0;
+         flex: 5;
+     }
+
+        .gallery {
+            background-image: url("../images/fot6.jpg");
+            background-size: contain; 
+            background-repeat: no-repeat;
+            background-position: center;
+         flex: 3;
+        //  width: 30%;
+     }
+
+     }
+
+     
+}

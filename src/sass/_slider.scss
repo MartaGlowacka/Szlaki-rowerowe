@@ -55,6 +55,8 @@
         background-color: black;
         color: white;
 
+    
+
         .picture {
             margin: 0 15px 0 15px;
             height: 60%;
@@ -134,4 +136,16 @@
     
     }
 }
+}
+
+@media screen and (max-width: 500px) {
+
+    .random_main_page {
+
+        display: none!important;
+
+        // .description, .picture, h1, button {
+        //     display: none;
+        // }        
+    }
 }

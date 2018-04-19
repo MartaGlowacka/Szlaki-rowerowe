@@ -104,7 +104,7 @@ import ReactDOM from 'react-dom';
     }
 
     componentDidMount () {
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.city}&APPID=56eb9c848f4c1249b5d049d6edb1f642`)
+        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.city}&APPID=e1581388278693874a8e19ab2f5159bd`)
         .then(resp => {
             if(resp.ok) {
                 return resp.json()

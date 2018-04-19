@@ -47,10 +47,11 @@ class Slider extends React.Component {
             <span style={{backgroundColor: 5 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={5}></span> 
             <span style={{backgroundColor: 6 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={6}></span>
             </div>
-    
-
-                <img src={`/src/images/${this.state.id}`} />         
-                <div className="random_main_page">
+             <img src={`/src/images/${this.state.id}`} />  
+           
+                       
+            <div className="random_main_page">
+            <h3>Trasa na dziś:</h3>
                 <div className="picture"></div>
                 <div className="description">
                 <h1>{route_name}</h1>
@@ -66,6 +67,8 @@ class Slider extends React.Component {
                 </div>
                 <button>Zobacz więcej propozycji</button>
                 </div>
+            
+               
             </div>
            
                  
