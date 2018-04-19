@@ -46,9 +46,14 @@ import SearchResults from './searchresults.jsx';
 
 
 class Search extends React.Component {
+
+    constructor(props) {
+        super(props);
+        console.log(props)
+    }
     state={
         data: [],
-        voivodeship: this.props.location.state.voivode,
+        voivodeship: (this.props.location && this.props.location.state && this.props.location.state.voivodeship) ?  this.props.location.state.voivodeship : 'calaPolska',
         easy: false,
         medium: false,
         difficult: false,
@@ -109,7 +114,7 @@ class Search extends React.Component {
             return null
         }
 
-        console.log('props form link',this.props.location.state.voivode);
+        // console.log('props form link',this.props.location.state.voivodeship);
         return (
             <div className='lower'>
                 <div className="wrapper search">
@@ -124,6 +129,7 @@ class Search extends React.Component {
                         handleBikeTypeSelect={this.handleBikeTypeSelect}
                         handleMinChange={this.handleMinChange}
                         handleMaxChange={this.handleMaxChange}
+                        voivodeship={this.state.voivodeship}
                     />
                     <SearchResults
                         distanceMin = {this.state.distanceMin}
@@ -193,7 +199,7 @@ export default Search;
 //             return null
 //         }
 //
-//         console.log('props form link',this.props.location.state.voivode);
+//         console.log('props form link',this.props.location.state.voivodeship);
 //         return (
 //             <div className='lower'>
 //                 <div className="wrapper search">

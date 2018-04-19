@@ -25,7 +25,7 @@ class App extends React.Component {
                     <Switch >
                         <div className={"lower"}>
                         <Route exact path='/' component={Home}/>
-                        <Route path='/search' component={Search}/>
+                        <Route path='/search'  component={Search}/>
                         <Route path='/about' component={About} />
                         <Route path='/contact' component={Contact} />
                         <Route path='/route/:id' component={ResultRoute} />

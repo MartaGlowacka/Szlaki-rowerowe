@@ -53,16 +53,6 @@ class SearchResults extends React.Component {
 
         resultArray = tempBikeType.slice();
 
-        // console.log(this.props.level, "level");
-        // let temp = [];
-        // for(let i = 0; i< this.props.level.length; i++) {
-        //     // console.log(resultArray)
-        //     resultArray.forEach( (route) => {
-        //         if(route.level === this.props.level[i])
-        //         {temp.push(route)}
-        //     })
-        // }
-
         let tempDistance = [];
 
         resultArray.forEach( (route) => {

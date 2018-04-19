@@ -10,7 +10,7 @@ class SearchForm extends React.Component {
         road: this.props.road,
         mtb: this.props.mtb,
         distanceMin: this.props.distanceMin,
-        distanceMax: this.props.distanceMax
+        distanceMax: this.props.distanceMax,
 
 
     }
@@ -103,10 +103,9 @@ class SearchForm extends React.Component {
 
         return (
             <div className="search_form">
-                Jestem SearchForm
                 <form noValidate>
                     <div>Wybierz województwo:
-                        <select onChange={this.handleVoivodeshipChange}>
+                        <select onChange={this.handleVoivodeshipChange} defaultValue={this.props.voivodeship}>
                             <option value="calaPolska">Cała Polska</option>
                             <option value="dolnoslaskie">woj. Dolnośląskie</option>
                             <option value="kujawsko-pomorskie">woj. Kujawsko-Pomorskie</option>

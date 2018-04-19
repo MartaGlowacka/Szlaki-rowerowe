@@ -1,0 +1,15 @@
+.hoverEffect {
+  fill: #4c8ca2;
+  &:hover {
+    animation: spin 1s linear infinite;
+  }
+
+}
+@keyframes spin {
+  from {
+    fill: #fa5314
+  }
+  to {
+    fill: #fa5
+  }
+}

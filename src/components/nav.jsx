@@ -30,7 +30,7 @@ class Nav extends React.Component {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/search'>
+                            <NavLink to={{ pathname: '/search', state: { voivodeship: 'calaPolska'} }}>
                                 Search
                             </NavLink>
                         </li>
