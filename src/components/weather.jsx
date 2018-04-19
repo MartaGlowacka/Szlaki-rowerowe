@@ -64,70 +64,32 @@ import ReactDOM from 'react-dom';
         }
         let description = this.state.weather[0].weather[0].description;
         let icon = this.state.weather[0].weather[0].icon;
+ 
 
-        const style = {
-            width: '35%',
-            height: '60vh',
-            border: '1px solid lightgrey',
-            boxSizing: 'border-box',
-            color: 'gray',
-            fontFamily: 'Arial',
-            background: 'rgba(226,226,226,1)'
-        }
  
-        const city = {
-            textAlign: 'center',
-            fontSize: '2.5em',
-            marginBottom: '10px',
-            marginTop: '10px',
-            backgroundColor: '#99CC99'
-        }
- 
-         const up_div = {
-            display: 'flex',
-             justifyContent: 'space-around'
-         }
-        const small_data = {
-            listStyle: 'none',
-            // paddingTop: '30px',
-        }
-        const next_days = {
-            listStyle: 'none',
-            display: 'flex',
-            justifyContent: 'space-around',
-            paddingLeft: '0',
-            marginTop: '30px'
-        }
-        const temp = {
-            fontSize: '40px',
-        }
- 
-        const iconka =  {
-            display: 'flex',
-            justifyContent: 'space-around',
-            width: '160px'
-        }
+
 
         return (
 
-            <section style={style}>
-                <h1 style={city}>{city_name}</h1>
-                <div style={up_div}>
+            <section className="main_weather_div">
+                <h1>{city_name}</h1>
+                <div className='up_div'>
                     <div >
                         <p><strong>{week[this.state.current_weekday]}, {this.state.current_time}</strong></p>
                         <p>{this.state.current_day}</p>
-                        <p style={iconka}><img src={`http://openweathermap.org/img/w/${icon}.png`}/> <span style={temp}>{Math.floor(current_weather-273.15)} &#186; C</span></p>
+                        <p className="iconka"><img src={`http://openweathermap.org/img/w/${icon}.png`}/> <span className="temp">{Math.floor(current_weather-273.15)} &#186; C</span></p>
                     </div>
-                    <ul style={small_data}>
+                    <ul className="small_data">
                         <li><strong>Wilgotność:</strong> {humidity}%</li>
                         <li><strong>Ciśnienie:</strong> {Math.floor(pressure)}hPa</li>
                         <li><strong>Zachmurzenie:</strong> {cloudiness}%</li>
                         <li><strong>Wiatr:</strong> {wind}m/sek</li>
                     </ul>
                 </div>
-                <div>
+                <p>Pogoda na kolejne dni..</p>
+                <div className="hover">
                     <hr/>
-                 <ul style={next_days}>
+                 <ul className="next_days">
                     <li >{week[this.generateNextDay(1)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(7)-273.15)} &#186; C</p><img src={`http://openweathermap.org/img/w/${this.generateIconForNextDay(15)}.png`}/></li>
                      <li>{week[this.generateNextDay(2)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(15)-273.15)} &#186; C</p><img src={`http://openweathermap.org/img/w/${this.generateIconForNextDay(15)}.png`}/></li>
                      <li>{week[this.generateNextDay(3)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(23)-273.15)} &#186; C</p><img src={`http://openweathermap.org/img/w/${this.generateIconForNextDay(23)}.png`}/></li>
@@ -142,7 +104,7 @@ import ReactDOM from 'react-dom';
     }
 
     componentDidMount () {
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.city}&APPID=db0a1381d8d7c95e1c021ec63e7a0fb5`)
+        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.city}&APPID=56eb9c848f4c1249b5d049d6edb1f642`)
         .then(resp => {
             if(resp.ok) {
                 return resp.json()
@@ -151,7 +113,7 @@ import ReactDOM from 'react-dom';
             }
         })
         .then(data => {
-            console.log(data.list)
+            console.log(data)
 
             this.setState({
                 city_name: data.city,
