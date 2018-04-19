@@ -7,7 +7,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className='lower'>
-                <div className="wrapper red">
+                <div>
                     <Slider />
                     <MapSection />
 

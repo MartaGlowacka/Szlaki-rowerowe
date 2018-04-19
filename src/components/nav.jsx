@@ -14,7 +14,10 @@ class Nav extends React.Component {
             <nav onClick={this.toggleSideNav}>
                 <div className="wrapper">
                     <NavLink exact to='/'>
-                        <h1>Tu jest logo</h1>
+                        <div className={'logo'}>
+                            <img src="/src/images/Kaczka_01.png" alt=""/>
+                            <h1><strong>K</strong>acze <strong>t</strong>rasy</h1>
+                        </div>
                     </NavLink>
 
                     <div className="hamburger">

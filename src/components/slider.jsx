@@ -62,7 +62,6 @@ class Slider extends React.Component {
                 </div>
                 <button>Zobacz więcej propozycji</button>
                 </div>
-                 
             </div>
         )
     }
