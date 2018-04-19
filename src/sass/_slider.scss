@@ -1,10 +1,27 @@
 .slider {
+
+    background-color: black;
+
+    .wrapper {
+
+    
     height: 85vh;
     width: 100%;
     margin: 0 auto;
     border: 2px solid black;
     display: flex;
     justify-content: center;
+    // color: #FED56F
+
+    .strong {
+        position: absolute;
+        color: white;
+        top: 90px;
+        left: 120px; 
+        text-shadow: 0 0 5px rgb(24, 31, 24);  
+        font-size: xx-large;
+    }
+    
 
     .next {
 
@@ -22,7 +39,7 @@
 
             border: 1px solid white;
             background: white;
-            opacity: 0.3;
+            // opacity: 0.3;
             margin-left: 10px;
         }
     }
@@ -30,7 +47,7 @@
     .random_main_page {
         height: 80%;
         width: 35%;
-        border: 1px solid white;
+        // border: 1px solid white;
         margin: 20px;
         display: flex;
         flex-direction: column;
@@ -39,14 +56,15 @@
         color: white;
 
         .picture {
-            margin: 15px;
+            margin: 0 15px 0 15px;
             height: 60%;
             width: 90%;
             border: 1px solid white;
-            background-image: url("../images/Kaczka_01.png");
+            background-image: url("../images/outdoor.jpg");
             background-size: contain; 
             background-repeat: no-repeat;
             background-position: center;
+            border: none;
 
         }
 
@@ -54,13 +72,19 @@
             margin: 15px;
             height: 35%;
             width: 90%;
-            border: 1px solid white;
+            // border: 1px solid white;
             font-size: 0.5em;
 
             p {
                 text-align: center;
                 font-style: italic;
                 font-size: 12px;
+                padding-top: 8px; 
+                opacity: 0.5;
+
+                &:hover {
+                    opacity: 1;
+                }
             }
 
             ul {
@@ -72,30 +96,33 @@
                li {
                    display: flex;
                    flex-direction: column;
+                   font-size: 16px;
 
                    span {
-                       font-size: small;
-
+                       font-size: 12px;
                    }
                }
             }
 
             h1 {
                 text-align: center;
-                font-size: 30px;
+                font-size: 25px;
                 margin-bottom: 10px;
             }
         }
 
         button {
             background-color: black;
-            border: 1px solid white;
+            border: 1px solid white;;
             color: white;
             padding: 4px;
             cursor: pointer;
+            width: 95%;
+            margin-left: 5px;
+            font-size: 15px;
 
             &:hover {
-                background-color: gray;
+                color: #FED56F;
             }
         }
     }
@@ -106,4 +133,5 @@
         height: 80%;
     
     }
+}
 }

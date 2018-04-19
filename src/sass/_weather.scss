@@ -1,32 +1,23 @@
 .main_weather_div {
     width: 35%;
     height: 40vh;
-    border: 1px solid lightgrey;
+    // border: 1px solid lightgrey;
     box-sizing: border-box;
     color: gray;
     font-family: Arial;
     margin-top: 30px;
-    border: 1px solid darkgray;
-    background: rgba(226,226,226,1);
-    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 51%, rgba(219,219,219,1) 65%, rgba(254,254,254,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(51%, rgba(209,209,209,1)), color-stop(65%, rgba(219,219,219,1)), color-stop(100%, rgba(254,254,254,1)));
-    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 51%, rgba(219,219,219,1) 65%, rgba(254,254,254,1) 100%);
-    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 51%, rgba(219,219,219,1) 65%, rgba(254,254,254,1) 100%);
-    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 51%, rgba(219,219,219,1) 65%, rgba(254,254,254,1) 100%);
-    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 51%, rgba(219,219,219,1) 65%, rgba(254,254,254,1) 100%);
+    // border: 1px solid darkgray;
+    opacity: 1;
+    // background: rgba(226,226,226,1);
+    
 
     h1 {
         text-align: center;
          font-size: 2.5em;
         margin-bottom: 10px;
         margin-top: 0;
-        background: rgba(162,171,113,1);
-        background: -moz-linear-gradient(top, rgba(162,171,113,1) 15%, rgba(158,185,130,1) 49%, rgba(155,197,144,1) 76%, rgba(153,204,153,1) 93%);
-        background: -webkit-gradient(left top, left bottom, color-stop(15%, rgba(162,171,113,1)), color-stop(49%, rgba(158,185,130,1)), color-stop(76%, rgba(155,197,144,1)), color-stop(93%, rgba(153,204,153,1)));
-        background: -webkit-linear-gradient(top, rgba(162,171,113,1) 15%, rgba(158,185,130,1) 49%, rgba(155,197,144,1) 76%, rgba(153,204,153,1) 93%);
-        background: -o-linear-gradient(top, rgba(162,171,113,1) 15%, rgba(158,185,130,1) 49%, rgba(155,197,144,1) 76%, rgba(153,204,153,1) 93%);
-        background: -ms-linear-gradient(top, rgba(162,171,113,1) 15%, rgba(158,185,130,1) 49%, rgba(155,197,144,1) 76%, rgba(153,204,153,1) 93%);
-        background: linear-gradient(to bottom, rgba(162,171,113,1) 15%, rgba(158,185,130,1) 49%, rgba(155,197,144,1) 76%, rgba(153,204,153,1) 93%);
+        background:  rgb(255, 214, 108);
+        
     }
 
     .up_div {

@@ -14,20 +14,21 @@ class Description extends React.Component {
 
     render () {
 
-        const opis_trasy = {
-            listStyle: 'none',
-            display: 'flex',
-            justifyContent: 'space-around',
-            // marginBottom: '70px'
-        }
+        // const opis_trasy = {
+        //     listStyle: 'none',
+        //     display: 'flex',
+        //     justifyContent: 'space-around',
+        //     // marginBottom: '70px'
+        // }
 
         return (
             <div className="main_description">
                 <h1>{this.state.name}</h1>
+                {/* <hr/> */}
                 <br/>
                 <span>Informacje:</span>
                 <hr/>
-                <ul style={opis_trasy}>
+                <ul >
                     <li><strong>Lokalizacja:</strong> {this.state.location}</li>
                     <li><strong>Rodzaj aktywności:</strong> {this.state.typeOfBike}</li>
                     <li><strong>Dystans:</strong> {this.state.distance} km</li>

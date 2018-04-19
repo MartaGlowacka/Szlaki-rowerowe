@@ -36,7 +36,9 @@ class Slider extends React.Component {
 
         return (
             <div className="slider">
-            <div className="next">
+            <div className="wrapper">
+            <strong className="strong">Wyrusz w kaczą podróż!</strong>
+             <div className="next">
             <span style={{backgroundColor: 0 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={0}></span>
             <span style={{backgroundColor: 1 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={1}></span>
             <span style={{backgroundColor: 2 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={2}></span>
@@ -45,6 +47,8 @@ class Slider extends React.Component {
             <span style={{backgroundColor: 5 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={5}></span> 
             <span style={{backgroundColor: 6 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={6}></span>
             </div>
+    
+
                 <img src={`/src/images/${this.state.id}`} />         
                 <div className="random_main_page">
                 <div className="picture"></div>
@@ -62,6 +66,8 @@ class Slider extends React.Component {
                 </div>
                 <button>Zobacz więcej propozycji</button>
                 </div>
+            </div>
+           
                  
             </div>
         )
@@ -95,7 +101,17 @@ class Slider extends React.Component {
            let tab4 = [];
            
         for (let i=0; i<data.length; i++) {
-            tab.push(`${data[i].name.slice(0,15)}..`)
+
+            // for (let j=15; j=0; j--) {
+            //     let empty_space = data[i].name[j].indexOf(" ")
+            //     if (empty_space > -1) {
+            //         tab.push(`${data[i].name.slice(0,15)}..`)
+            //     }
+            // }
+
+
+            // tab.push(`${data[i].name.slice(0,15)}..`)
+            tab.push(data[i].name)
             tab2.push(data[i].distance)
             tab3.push(data[i].location)
             tab4.push(data[i].level)

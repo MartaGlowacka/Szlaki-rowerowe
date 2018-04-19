@@ -1,12 +1,25 @@
 .main_description {
     margin-top: 15px;
+    height: 100px;
 
     h1 {
-        padding-bottom: 10px;
+        // padding-bottom: 20px;
      
     }
 
+    // span {
+    //     &:after {
+    //         content: 'czdvsds';
+    //         height: 3px;
+    //         width: 120px;
+    //         background-color: red;
+    //     }
+    // }
+
     ul {
         padding-top: 20px;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
     }
 }
