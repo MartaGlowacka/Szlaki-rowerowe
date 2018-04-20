@@ -13,24 +13,50 @@ class Slider extends React.Component {
         random: Math.floor(Math.random()*128),
     }
 
-    handleClick = () => {
-
-        // clearInterval(this.id)
-        console.log(this.setState.photo_indeks)
+    handleClick = (e) => {
+     
         this.setState({
-            photo_indeks: this.state.photo_indeks + 1,
+            photo_indeks: Number(e.target.dataset.id)
+        }, () => {
+
+            clearInterval(this.id)
+
+            this.runSlider(true);
+
         })
-        console.log(this.setState.photo_indeks)
+    }
+
+    runSlider = (now=false) => {
+
+        const photo = ['afternoon.jpg', 'bicycling.jpg', 'bike.jpg', 'gruzja.jpg', 'man.jpg', 'fot3.jpg', 'fot4.jpg', 'fot5.jpg', 'fot6.jpg', 'fot7.jpg', 'fot8.jpg'];
+
+        if (now) {
+            this.setState({         
+                id: photo[this.state.photo_indeks]
+            })
+        }
+        this.id = setInterval(()=> {
+
+                (this.state.photo_indeks < photo.length-1) ? this.setState({photo_indeks: this.state.photo_indeks+1}) : this.setState({photo_indeks: 0})
+            
+            this.setState({         
+                id: photo[this.state.photo_indeks]
+            })
+            
+        }, 4000)
+
     }
 
 
 
-    render () {
-        console.log(this.setState.photo_indeks)
+    render () {   
 
         if (this.state.name.length === 0) {
             return null
         }
+
+
+       
 
         let route_name = this.state.name[this.state.random];
         let distance = this.state.distance[this.state.random];
@@ -39,7 +65,21 @@ class Slider extends React.Component {
 
         let color = 'black';
 
+        
 
+        let white_space = route_name.indexOf(" ");
+        console.log(white_space)
+
+
+        for (let i=route_name.length; i=0; i--) {
+            console.log(route_name[i])
+            let white_space = route_name[i].indexOf(" ");
+            if(white_space > -1) {
+                route_name = route_name.slice(0, white_space)
+            }
+            
+        }
+        console.log(route_name)
 
         return (
             <div className="slider">
@@ -48,12 +88,12 @@ class Slider extends React.Component {
             <strong className="strong">Wyrusz w kaczą podróż!</strong>
              <div className="next">
             <span onClick={this.handleClick} style={{backgroundColor: 0 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={0}></span>
-            <span style={{backgroundColor: 1 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={1}></span>
-            <span style={{backgroundColor: 2 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={2}></span>
-            <span style={{backgroundColor: 3 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={3}></span>
-            <span style={{backgroundColor: 4 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={4}></span>
-            <span style={{backgroundColor: 5 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={5}></span> 
-            <span style={{backgroundColor: 6 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={6}></span>
+            <span onClick={this.handleClick} style={{backgroundColor: 1 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={1}></span>
+            <span onClick={this.handleClick} style={{backgroundColor: 2 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={2}></span>
+            <span onClick={this.handleClick} style={{backgroundColor: 3 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={3}></span>
+            <span onClick={this.handleClick} style={{backgroundColor: 4 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={4}></span>
+            <span onClick={this.handleClick} style={{backgroundColor: 5 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={5}></span> 
+            <span onClick={this.handleClick} style={{backgroundColor: 6 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={6}></span>
      
             </div>
              <img src={`/src/images/${this.state.id}`} />  
@@ -89,19 +129,10 @@ class Slider extends React.Component {
     }
 
     componentDidMount () {
-   const photo = ['afternoon.jpg', 'bicycling.jpg', 'bike.jpg', 'gruzja.jpg', 'man.jpg', 'fot3.jpg', 'fot4.jpg', 'fot5.jpg', 'fot6.jpg', 'fot7.jpg', 'fot8.jpg'];
-
-        this.id = setInterval(()=> {
-                (this.state.photo_indeks < photo.length-1) ? this.setState({photo_indeks: this.state.photo_indeks+1}) : this.setState({photo_indeks: 0})
-            
-            this.setState({         
-                id: photo[this.state.photo_indeks]
-            })
-            
-        }, 4000)
+   
+        this.runSlider();
 
 
-        
 
 
         fetch(`http://localhost:3000/routes/`)
