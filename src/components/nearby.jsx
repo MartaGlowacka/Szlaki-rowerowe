@@ -5,7 +5,6 @@ class Nearby extends React.Component {
 
     state = {
         text: this.props.text,
-        show: 'block',
 
     }
 
@@ -19,14 +18,6 @@ class Nearby extends React.Component {
 
         const opis_trasy = {
             listStyle: 'none',
-            display: this.state.show,
-        }
-
-
-        const rozwin = {
-            
-            cursor: 'pointer',
-
         }
 
         return (
@@ -38,9 +29,9 @@ class Nearby extends React.Component {
                 {/* <img src="../images/bike.jpg" /> */}
 
                 <ul className="random_route_list" style={opis_trasy}>
-                    <li ><SingleRandomRoute image='bike.jpg'/></li>
-                    <li ><SingleRandomRoute image='outdoor.jpg'/></li>
-                    <li><SingleRandomRoute image='silent.jpg'/></li>
+                     <li ><SingleRandomRoute image='image_1'/></li>
+                    <li ><SingleRandomRoute image='image_2'/></li>
+                    <li><SingleRandomRoute image='image_3'/></li>
                 </ul>
             </div>
 

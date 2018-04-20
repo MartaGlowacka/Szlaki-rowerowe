@@ -1,14 +1,10 @@
 .main_weather_div {
     width: 35%;
     height: 60vh;
-    // border: 1px solid lightgrey;
     box-sizing: border-box;
     color: gray;
-    font-family: Arial;
     // margin-top: 30px;
-    // border: 1px solid darkgray;
     opacity: 1;
-    // background: rgba(226,226,226,1);
     
 
     h1 {
@@ -63,3 +59,8 @@
 
 }
 
+// @media screen and (max-width: 500px) {
+//     .main_weather_div {
+//         display: none!important;
+//     }
+// }

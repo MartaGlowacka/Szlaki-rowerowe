@@ -11,7 +11,6 @@ class SingleRandomRoute extends React.Component {
 
 
     render () {
-        
     
         if (this.state.id.length === 0) {
             return null
@@ -19,11 +18,15 @@ class SingleRandomRoute extends React.Component {
 
         return(
 
+            // {{backgroundImage: 'url(`src/images/${this.state.image}`)'}}    
             
-            <div className="single" >            
-                <div className='imag'></div>              
+            <div className="single" > 
+            
+            {/* style={{flex: '1'}} to byla w ifrejmie */}
+                  
+                <div  className={this.props.image}></div>              
                 {/* <img style={{height: '200px', width: '350px'}}  src={`/src/images/${this.state.image}`} /></div> */}
-                <iframe style={{flex: '1'}} src={`https://www.traseo.pl/mapa/${this.state.id[this.state.random]}/m/0/i/0/g/0/`} style={{width:"250px", height:"100%",frameborder:'0'
+                <iframe style={{flex: '1'}} src={`https://www.traseo.pl/mapa/${this.state.id[this.state.random]}/m/0/i/0/g/0/`} style={{width:"350px", height:"100%",frameborder:'0'
              }}/>
             </div>
            
@@ -41,13 +44,14 @@ class SingleRandomRoute extends React.Component {
            }
        })
        .then(data => {
+
            let tab =[];
            
         for (let i=0; i<data.length; i++) {
             tab.push(data[i].id)
         }
            this.setState({
-               id: tab
+               id: tab,
            })
 
        }).catch(err => {

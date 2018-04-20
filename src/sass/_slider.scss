@@ -19,7 +19,7 @@
         // top: 90px;
         top: 15vh;
         // left: 120px; 
-        left: 6vw;
+        left: 10vw;
         text-shadow: 0 0 5px rgb(24, 31, 24);  
         font-size: xx-large;
     }
@@ -57,15 +57,20 @@
         background-color: black;
         color: $kaczkowy;
 
+        h3 {
+            padding-left: 25px;
+        }
+
     
 
         .picture {
-            margin: 0 15px 0 15px;
+            margin: 0;
             height: 60%;
-            width: 90%;
+            width: 100%;
             border: 1px solid white;
             background-image: url("../images/outdoor.jpg");
             background-size: contain; 
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             border: none;
@@ -83,7 +88,7 @@
                 text-align: center;
                 font-style: italic;
                 font-size: 12px;
-                padding-top: 8px; 
+                padding-top: 25px; 
                 opacity: 0.5;
 
                 &:hover {
@@ -123,6 +128,7 @@
             cursor: pointer;
             width: 95%;
             margin-left: 5px;
+            margin-top: 50px;
             font-size: 15px;
 
             &:hover {
@@ -133,10 +139,19 @@
 
     img {
         margin: 20px;
-        width: 60%;
+        width: 55vw;
+        // width: 60%;
         height: 80%;
-    
+
+
+    //      @media screen and (max-width: 500px) {
+    //     height: 30%;
+    //     width: 30vw;
+    // }
+
     }
+
+   
 }
 }
 
