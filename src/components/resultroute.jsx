@@ -32,13 +32,15 @@ class ResultRoute extends React.Component {
         console.log(this.props);
         return (
 
-            <section className = 'lower main_result_section'>
+            <section className = 'main_result_section'>
             <div className='wrapper'>
                  <Description location={this.state.location} name={this.state.name} typeOfBike={this.state.typeOfBike} distance={this.state.distance} duration={this.state.duration} level={this.state.level}/>
-               <div className="lower main_container">
-            <SingleMap id={this.state.id}/>
-            <Weather city={this.state.location}/> 
-            </div> 
+                 <div className="lower main_container">
+                 <SingleMap id={this.state.id}/>
+                 <Weather city={this.state.location}/> 
+
+                 
+                 </div> 
             <Route_description/>
             <Nearby text='Zobacz trasy w okolicy:'/>
             </div>

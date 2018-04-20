@@ -5,7 +5,7 @@ class Slider extends React.Component {
 
     state = {
         id: '',
-        random_nr: 0,
+        photo_indeks: 0,
         name: [],
         distance: [],
         start: [],
@@ -13,13 +13,22 @@ class Slider extends React.Component {
         random: Math.floor(Math.random()*128),
     }
 
+    handleClick = () => {
+
+        // clearInterval(this.id)
+        console.log(this.setState.photo_indeks)
+        this.setState({
+            photo_indeks: this.state.photo_indeks + 1,
+        })
+        console.log(this.setState.photo_indeks)
+    }
 
 
 
     render () {
+        console.log(this.setState.photo_indeks)
 
-
-        if (this.state.name.length === null) {
+        if (this.state.name.length === 0) {
             return null
         }
 
@@ -35,15 +44,17 @@ class Slider extends React.Component {
         return (
             <div className="slider">
             <div className="wrapper">
+      
             <strong className="strong">Wyrusz w kaczą podróż!</strong>
              <div className="next">
-            <span style={{backgroundColor: 0 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={0}></span>
-            <span style={{backgroundColor: 1 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={1}></span>
-            <span style={{backgroundColor: 2 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={2}></span>
-            <span style={{backgroundColor: 3 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={3}></span>
-            <span style={{backgroundColor: 4 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={4}></span>
-            <span style={{backgroundColor: 5 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={5}></span> 
-            <span style={{backgroundColor: 6 === this.state.random_nr ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={6}></span>
+            <span onClick={this.handleClick} style={{backgroundColor: 0 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={0}></span>
+            <span style={{backgroundColor: 1 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={1}></span>
+            <span style={{backgroundColor: 2 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={2}></span>
+            <span style={{backgroundColor: 3 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={3}></span>
+            <span style={{backgroundColor: 4 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={4}></span>
+            <span style={{backgroundColor: 5 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={5}></span> 
+            <span style={{backgroundColor: 6 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={6}></span>
+     
             </div>
              <img src={`/src/images/${this.state.id}`} />  
            
@@ -81,13 +92,16 @@ class Slider extends React.Component {
    const photo = ['afternoon.jpg', 'bicycling.jpg', 'bike.jpg', 'gruzja.jpg', 'man.jpg', 'fot3.jpg', 'fot4.jpg', 'fot5.jpg', 'fot6.jpg', 'fot7.jpg', 'fot8.jpg'];
 
         this.id = setInterval(()=> {
-                (this.state.random_nr < photo.length-1) ? this.setState({random_nr: this.state.random_nr+1}) : this.setState({random_nr: 0})
+                (this.state.photo_indeks < photo.length-1) ? this.setState({photo_indeks: this.state.photo_indeks+1}) : this.setState({photo_indeks: 0})
             
             this.setState({         
-                id: photo[this.state.random_nr]
+                id: photo[this.state.photo_indeks]
             })
             
         }, 4000)
+
+
+        
 
 
         fetch(`http://localhost:3000/routes/`)
