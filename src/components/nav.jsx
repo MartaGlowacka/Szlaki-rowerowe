@@ -26,22 +26,22 @@ class Nav extends React.Component {
                     <ul className="navList">
                         <li>
                             <NavLink exact to='/'>
-                                Home
+                                Strona główna
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to={{ pathname: '/search', state: { voivodeship: 'calaPolska'} }}>
-                                Search
+                                Szukaj trasy
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to='/about'>
-                                About
+                                O stronie
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to='/contact'>
-                                Contact
+                                Kontakt
                             </NavLink>
                         </li>
                     </ul>

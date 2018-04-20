@@ -1,15 +1,87 @@
-path {
-  &:hover {
-    animation: spin 0.2s ease-in;
-    animation-fill-mode: forwards;
+.mapSection {
+  overflow: hidden;
+  display: flex;
+  .map {
+   flex: 2;
+  }
+  .mapDescription {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mapSection {
+    display: flex;
+    flex-direction: column;
   }
 
 }
-@keyframes spin {
-  from {
-    fill: #feb544
+
+
+
+path {
+  transition: fill 0.5s ease;
+
+  &:hover {
+    fill:$kaczkowy!important;
   }
-  to {
-    fill: #ff853d
+}
+
+.scaling-svg-container {
+  position: relative;
+  max-height: 0;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 80%;
+  min-width: 300px!important;
+  //overflow: hidden;
+  /* override this inline for aspect ratio other than square */
+}
+.scaling-svg {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  left: 50%;
+  top: 55%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.mapa {
+  text-align: center;
+  button {
+    width: 70%;
+    margin: 1rem auto;
+
+    background-color: rgba(61,61,61,9.5);
+    border-radius: 3px;
+    color: white;
+    padding: 0.5em;
+    //height: 2em;
+    border: none;
+    cursor: pointer;
+    a {
+     font-size: 1.6rem;
+    }
   }
+
+  h3 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0;
+  }
+
+  button:hover {
+    outline: none;
+    background-color: #60862E;
+    transition: 0.1s;
+  }
+
+  button:active {
+    border: 2px solid #364212;
+  }
+
 }

@@ -11,14 +11,14 @@ $grayopacity07: rgba(61,61,61, 0.7);
   font-size: 16px;
 }
 
-html, body {
+body {
   position: relative;
   font-family: 'Lato', sans-serif;
   background-color: rgba(255,214,108, 0.5);
   min-width: 250px;
+  min-height: 100vh;
+  padding-bottom: 40px;
 }
-
-
 
 .wrapper {
   max-width: 1400px;

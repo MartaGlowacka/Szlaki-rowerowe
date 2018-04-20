@@ -2,11 +2,11 @@
   display: flex;
   justify-content: space-between;
   &_form {
-    flex: 1;
+    flex: 3;
     margin-right: 10px;
   }
   &_results {
-    flex: 3;
+    flex: 5;
   }
 }
 
@@ -17,11 +17,13 @@
   padding: 1em;
   transition: transform .2s;
   &:hover {
-    background-color: $grayopacity07;
-    transform: scale(1.03);
+    border: 2px solid $navbar;
+
+    transform: scale(1.01);
   }
   &:active {
-    border: 2px solid $navbar;
+    background-color: $grayopacity07;
+
 
   }
 
@@ -36,7 +38,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .search {
     display: flex;
     flex-direction: column;
@@ -47,6 +49,16 @@
 .search_form {
   label {
     display: block;
+  }
+
+  div {
+    padding: 10px 0;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 5px 0;
   }
 
 }

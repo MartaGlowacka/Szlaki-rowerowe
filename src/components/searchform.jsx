@@ -63,13 +63,13 @@ class SearchForm extends React.Component {
     setLevel = () => {
         const levelArray = [];
         if (this.state.easy) {
-            levelArray.push('easy')
+            levelArray.push('łatwy')
         }
         if (this.state.medium) {
-            levelArray.push('medium')
+            levelArray.push('średni')
         }
         if (this.state.difficult) {
-            levelArray.push('difficult')
+            levelArray.push('trudny')
         }
 
         this.props.handleLevelSelect(levelArray);
@@ -89,10 +89,10 @@ class SearchForm extends React.Component {
     setBikeType = () => {
         const bikeArray = [];
         if (this.state.mtb) {
-            bikeArray.push('mtb')
+            bikeArray.push('Rower górski')
         }
         if (this.state.road) {
-            bikeArray.push('road')
+            bikeArray.push('Rower szosowy')
         }
 
         this.props.handleBikeTypeSelect(bikeArray);
@@ -104,11 +104,12 @@ class SearchForm extends React.Component {
         return (
             <div className="search_form">
                 <form noValidate>
-                    <div>Wybierz województwo:
+                    <div>
+                        <h4>Wybierz województwo:</h4>
                         <select onChange={this.handleVoivodeshipChange} defaultValue={this.props.voivodeship}>
-                            <option value="calaPolska">Cała Polska</option>
+                            <option value="calaPolska"><strong>Cała Polska</strong></option>
                             <option value="dolnoslaskie">woj. Dolnośląskie</option>
-                            <option value="kujawsko-pomorskie">woj. Kujawsko-Pomorskie</option>
+                            <option value="kujawsko-pomeorskie">woj. Kujawsko-Pomorskie</option>
                             <option value="lubelskie">woj. Lubelskie</option>
                             <option value="lubuskie">woj. Lubuskie</option>
                             <option value="lodzkie">woj. Łódzkie</option>
@@ -126,35 +127,33 @@ class SearchForm extends React.Component {
                         </select>
                     </div>
                     <div>
-                        <p>Poziom trudności:</p>
+                        <h4>Poziom trudności:</h4>
                         <label>
-                            <input type="checkbox" value='easy' onChange={this.handleLevelSelectEasy}
+                            <input type="checkbox" value='łatwy' onChange={this.handleLevelSelectEasy}
                                    checked={this.state.easy}/> Łatwy
                         </label>
                         <label>
-                            <input type="checkbox" value='medium' onChange={this.handleLevelSelectMedium}
+                            <input type="checkbox" value='średni' onChange={this.handleLevelSelectMedium}
                                    checked={this.state.medium}/>
                             Średni</label>
-                        <label><input type="checkbox" value='difficult' onChange={this.handleLevelSelectDifficult}
+                        <label><input type="checkbox" value='trudny' onChange={this.handleLevelSelectDifficult}
                                       checked={this.state.difficult}/>Trudny</label>
                     </div>
                     <div>
-                        Rower:
-                        <label><input type="checkbox" value='mtb' onChange={this.handleBikeSelectMtb}
+                        <h4>Rodzaj aktywności:</h4>
+                        <label><input type="checkbox" value='Rower górski' onChange={this.handleBikeSelectMtb}
                                       checked={this.state.mtb}/>Rower górski</label>
-                        <label><input type="checkbox" value='road' onChange={this.handleBikeSelectRoad}
-                                      checked={this.state.road}/>Rower szsowy</label>
+                        <label><input type="checkbox" value='Rower szosowy' onChange={this.handleBikeSelectRoad}
+                                      checked={this.state.road}/>Rower szosowy</label>
                     </div>
                     <div>
-                        Długość trasy:
+                        <h4>Długość trasy:</h4>
                         <label>Min:
                             <input type="number" value={this.state.distanceMin} onChange={this.handleMinChange}/>
                         </label>
                         <label>Max:
                             <input type="number" value={this.state.distanceMax} onChange={this.handleMaxChange}/>
                         </label>
-
-                        handleMinChange
                     </div>
 
                 </form>
