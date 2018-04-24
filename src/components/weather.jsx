@@ -35,7 +35,7 @@ import ReactDOM from 'react-dom';
 
     render () {
 
-        if (this.state.weather.length===0) {
+        if (this.state.weather.length===0 && this.state.city_name.length===0 ) {
             return null
         }
 

@@ -67,19 +67,29 @@ class Slider extends React.Component {
 
         
 
-        let white_space = route_name.indexOf(" ");
-        console.log(white_space)
+        // let white_space = route_name.lastindexOf(" ");
+        // console.log(white_space)
 
+        if (route_name.length > 30) {
 
-        for (let i=route_name.length; i=0; i--) {
-            console.log(route_name[i])
-            let white_space = route_name[i].indexOf(" ");
-            if(white_space > -1) {
-                route_name = route_name.slice(0, white_space)
+            for (let i=route_name.length; i=0; i--) {
+                //  let white_space = route_name.LastindexOf(" ");
+
+            if(route_name.photo_indeksOf(" ") > -1) {
+                route_name = route_name.slice(0, route_name.photo_indeksOf(" "))
+             }
             }
+        } 
+
+        // for (let i=route_name.length; i=0; i--) {
+           
+        //     let white_space = route_name.indexOf(" ");
+        //     if(white_space > -1) {
+        //         route_name = route_name.slice(0, white_space)
+        //     }
             
-        }
-        console.log(route_name)
+        // }
+        // console.log(route_name.slice(0, white_space))
 
         return (
             <div className="slider">
