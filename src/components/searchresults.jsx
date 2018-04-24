@@ -61,7 +61,7 @@ resultArray = tempDistance.slice();
 let resultList = [];
 
         if (resultArray.length === 0) {
-            resultList = (<li>
+            resultList = (<li className={'noresult'}>
                 <h4>Niestety nie znaleziono tras, które spełniają wszystkie podane kryteria wyszukiwania.</h4>
                 <p>Proszę zmienić kryteria i spróbować ponownie</p>
                 <img src="src/images/Kaczka_01.png" alt=""/>

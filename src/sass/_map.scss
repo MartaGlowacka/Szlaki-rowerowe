@@ -1,11 +1,15 @@
 .mapSection {
   overflow: hidden;
   display: flex;
+
+
   .map {
    flex: 2;
   }
   .mapDescription {
     flex: 1;
+
+
   }
 }
 
@@ -27,24 +31,24 @@ path {
   }
 }
 
-.scaling-svg-container {
-  position: relative;
-  max-height: 0;
-  width: 100%;
-  padding: 0;
-  padding-bottom: 80%;
-  min-width: 300px!important;
-  //overflow: hidden;
-  /* override this inline for aspect ratio other than square */
-}
-.scaling-svg {
-  position: absolute;
-  height: 90%;
-  width: 90%;
-  left: 50%;
-  top: 55%;
-  transform: translateX(-50%) translateY(-50%);
-}
+//.scaling-svg-container {
+//  position: relative;
+//  max-height: 0;
+//  width: 100%;
+//  padding: 0;
+//  padding-bottom: 80%;
+//  min-width: 300px!important;
+//  //overflow: hidden;
+//  /* override this inline for aspect ratio other than square */
+//}
+//.scaling-svg {
+//  position: absolute;
+//  height: 90%;
+//  width: 90%;
+//  left: 50%;
+//  top: 55%;
+//  transform: translateX(-50%) translateY(-50%);
+//}
 
 .mapa {
   text-align: center;
@@ -64,9 +68,11 @@ path {
     }
   }
 
-  h3 {
+  h4 {
+    font-size: 1.2rem;
     text-align: center;
-    font-size: 1.6rem;
+    font-weight: normal;
+    padding-bottom: 20px;
   }
   .button-wrapper {
     display: flex;
@@ -84,4 +90,18 @@ path {
     border: 2px solid #364212;
   }
 
+}
+
+.mapDescription {
+  h3 {
+    font-size: 1.7rem;
+    padding: 10px;
+  }
+h5 {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+  p {
+    padding: 6px 12px;
+  }
 }

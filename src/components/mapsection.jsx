@@ -30,12 +30,12 @@ class MapSection extends React.Component {
                         Wyszukaj trasy rowerowe w całej Polsce
                     </Link>
                 </button>
-                <h3>lub kliknij na mapie jeśli szukasz tras w konkretnym województwie</h3>
+                <h4>lub kliknij na mapie jeśli szukasz tras w konkretnym województwie</h4>
                 <div className={' mapSection'}>
                 <div className={'mapDescription'}>
                     <h3>SZUKASZ TRASY ROWEROWEJ?</h3>
 
-                    <p>Trafiłeś w idealne miejsce</p>
+                    <h5>Trafiłeś w idealne miejsce</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dolor doloribus eum exercitationem, hic illo inventore iste magnam modi quod quos tempora voluptatem voluptatibus. Ad expedita iure repudiandae!</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dolor doloribus eum exercitationem, hic illo inventore iste magnam modi quod quos tempora voluptatem voluptatibus. Ad expedita iure repudiandae!</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dolor doloribus eum exercitationem, hic illo inventore iste magnam modi quod quos tempora voluptatem voluptatibus. Ad expedita iure repudiandae!</p>
