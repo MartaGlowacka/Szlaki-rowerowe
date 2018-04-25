@@ -14,22 +14,10 @@ class Contact extends React.Component {
                                     <textarea name="message"placeholder="Treść wiadomości.." required>
 
                                     </textarea>
-
-
-                        <div className="checkbox-wrapper">
-                            <input type="checkbox"/>
-                            <p>Wyslij kopię maila do mnie</p>
-                        </div>
-                                    {/*<div className="checkbox-wrapper">*/}
-
-                                        {/*<label className={'labelCheckbox'} for="sendCopy">*/}
-                                            {/*<input type="checkbox" id="sendCopy"/>Wyslij kopię maila do mnie*/}
-                                        {/*</label>*/}
-
-
-
-
-                                    {/*</div>*/}
+                                    <div className="checkbox-wrapper">
+                                        <input type="checkbox"/>
+                                            <p>Wyslij kopię maila do mnie</p>
+                                    </div>
                                     <button>Wyślij wiadomość</button>
                         </form>
                 </div>
