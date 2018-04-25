@@ -3,9 +3,7 @@ import React from 'react';
 import {
     HashRouter,
     Route,
-    Link,
     Switch,
-    NavLink,
 } from 'react-router-dom';
 
 import Nav from './nav.jsx';
@@ -22,15 +20,21 @@ class App extends React.Component {
             <HashRouter>
                 <div>
                     <Nav/>
-                    <Switch>
+                    <Switch >
+                        <div className={"lower"}>
                         <Route exact path='/' component={Home}/>
-                        <Route path='/search' component={Search}/>
+                        <Route path='/search'  component={Search}/>
                         <Route path='/about' component={About} />
                         <Route path='/contact' component={Contact} />
                         <Route path='/route/:id' component={ResultRoute} />
-
+                        </div>
                         {/*<Route component={NotFound} />*/}
                     </Switch>
+                    <footer >
+                        <div className={'footer'}>
+                            © Kacze trasy
+                        </div>
+                    </footer>
                 </div>
             </HashRouter>
         )

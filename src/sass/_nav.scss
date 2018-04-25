@@ -1,26 +1,51 @@
 @mixin easeOut {
-  transition: all .4s cubic-bezier(0.23, 1, 0.32, 1)
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1)
 }
-$black: black;
 
 nav {
   position: fixed;
-  min-width: 100%; //na pewno wtedy jest 100%
-  height: 50px;
-  background-color: white;
+  min-width: 100%;
+  height: 60px;
+  background-color: $navbar;
   z-index: 1000;
+  color: white;
 }
 
-//wrapper w nav
 nav {
   .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    line-height: 60px;
+  }
+  //
+  //a {
+  //  text-decoration: none;
+  //  color: white;
+  //}
+}
+
+.logo {
+  display: flex;
+  img {
+    width: 43px;
+    height: 40px;
+    position: absolute;
+    top: 8px;
+  }
+  h1 {
+    margin-left: 60px;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+  }
+
+  strong {
+    color: $kaczkowy;
+    font-size: inherit;
   }
 }
 
-//lista w nav
+
 nav {
   ul {
     width: 60%;
@@ -36,20 +61,19 @@ nav {
 
     a {
       display: block;
-      color: black;
-      line-height: 50px;
-      text-decoration: none;
+      line-height: 50px;;
       @include easeOut;
 
       &:hover {
-        color: red;
+        color: $kaczkowy;
+        font-weight: bold;
       }
     }
 
   }
 }
 
-//burger icom
+//burger icon
 nav {
   .hamburger {
     display: none;
@@ -57,15 +81,16 @@ nav {
     width: 30px;
     margin: 5px;
     cursor: pointer;
-    //@include easeOut;
+
+    @include easeOut;
 
     i, i:before, i:after {
       content: '';
       width: 25px; height: 4px;
-      background: $black;
+      background: $kaczkowy;
       border-radius: 4px;
       cursor: pointer;
-      //transition: transform .2s ease;
+      transition: transform .2s ease;
     }
 
     i {
@@ -86,7 +111,8 @@ nav {
     }
 
   }
-  //robinie krzyzyka po kliknieciu
+
+  //cross after click
   &.active{
     i {
       background: transparent;
@@ -96,7 +122,6 @@ nav {
       top: 0;
       transform: rotate(45deg);
     }
-
     i:after {
       top: 0;
       transform: rotate(-45deg);
@@ -105,7 +130,6 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  //wystylowanie lsisty dla malych przed kliknieciem
   nav {
     ul{
       display: none;
@@ -121,11 +145,13 @@ nav {
       position:absolute;
       top:100%;
       right:0;
-      //flex-direction: column;
 
       li {
         text-align:center;
-        background: white;
+        background: $grayopacity09;
+      }
+      li:hover {
+        background: $navbar;
       }
     }
 

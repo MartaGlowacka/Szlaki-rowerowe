@@ -13,29 +13,35 @@ class Nav extends React.Component {
         return (
             <nav onClick={this.toggleSideNav}>
                 <div className="wrapper">
-                    <h1>Tu jest logo</h1>
+                    <NavLink exact to='/'>
+                        <div className={'logo'}>
+                            <img src="/src/images/Kaczka_01.png" alt=""/>
+                            <h1><strong>K</strong>acze <strong>t</strong>rasy</h1>
+                        </div>
+                    </NavLink>
+
                     <div className="hamburger">
                         <i></i>
                     </div>
                     <ul className="navList">
                         <li>
                             <NavLink exact to='/'>
-                                Home
+                                Strona główna
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/search'>
-                                Search
+                            <NavLink to={{ pathname: '/search', state: { voivodeship: 'calaPolska'} }}>
+                                Szukaj trasy
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to='/about'>
-                                About
+                                O stronie
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to='/contact'>
-                                Contact
+                                Kontakt
                             </NavLink>
                         </li>
                     </ul>

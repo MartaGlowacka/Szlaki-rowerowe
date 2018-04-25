@@ -1,17 +1,14 @@
 import React from 'react';
 
-import Map from './map.jsx'
+import MapSection from './mapsection.jsx'
+import Slider from './slider.jsx'
 
 class Home extends React.Component {
     render() {
         return (
-            <div className='lower'>
-                <div className="wrapper red">
-                    Jestem Home
-
-                    <Map />
-                </div>
-
+            <div>
+                    <Slider />
+                    <MapSection />
             </div>
         )
     }
